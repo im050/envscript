@@ -39,7 +39,7 @@ services:
     container_name: 'redis'
     restart: always
     volumes:
-      - ./redis/redis.conf:/etc/redis/redis.conf:ro
+      - ./redis/conf/redis.conf:/etc/redis/redis.conf:ro
       - ./redis/data:/data
       - ./redis/logs:/logs
     command: redis-server /etc/redis/redis.conf
