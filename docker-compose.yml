@@ -24,8 +24,8 @@ services:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/conf/my.cnf:/etc/my.cnf
     environment:
-      - MYSQL_ROOT_PASSWORD=123456
-      - TZ=Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 123456
+      TZ: Asia/Shanghai
     networks:
       app_net:
         ipv4_address: 10.1.0.101
@@ -49,7 +49,7 @@ services:
       app_net:
         ipv4_address: 10.1.0.102
     environment:
-      - TZ=Asia/Shanghai
+      TZ: Asia/Shanghai
 networks:
   app_net:
     driver: bridge
